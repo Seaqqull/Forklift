@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462634511209862270}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.65, z: 1.2}
+  m_LocalPosition: {x: 0, y: -0.65, z: 0.59}
   m_LocalScale: {x: 0.1, y: 0.7, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1021,6 +1021,8 @@ GameObject:
   - component: {fileID: 8738018343944659225}
   - component: {fileID: 1441252302707224854}
   - component: {fileID: 6521653944303949610}
+  - component: {fileID: 2649324865274545189}
+  - component: {fileID: 1315665011}
   m_Layer: 0
   m_Name: Forklift
   m_TagString: Untagged
@@ -1045,7 +1047,7 @@ Transform:
   - {fileID: 6771356473825997671}
   - {fileID: 8813623816837419345}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1441252302707224854
 BoxCollider:
@@ -1054,12 +1056,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5680079340033865453}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: dee2e97b777b042a8862fc52fec81f09, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.2, z: 2.05}
-  m_Center: {x: 0, y: -0.15, z: 0.37}
+  m_Size: {x: 1.6, y: 1.2, z: 1.3}
+  m_Center: {x: 0, y: -0.15, z: 0.05}
 --- !u!54 &6521653944303949610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1076,6 +1078,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!195 &2649324865274545189
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680079340033865453}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 1.25
+  m_BaseOffset: 0.75
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1315665011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680079340033865453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b3c445d093443579d9cf25af5ca189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 120
+  _rotationSpeedInPlase: 45
+  _rotationSpeedInMovement: 30
 --- !u!1 &8268657798847404773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,8 +1240,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8918310787870265249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0.4}
-  m_LocalScale: {x: 1.2, y: 0.1, z: 2}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0.045}
+  m_LocalScale: {x: 1.2, y: 0.1, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8738018343944659225}
