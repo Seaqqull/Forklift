@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 
@@ -17,6 +18,19 @@ namespace Forklift.General
                 return;
 
             ItemToPickup = item;
+            ItemToPickup.Attach(Transform);
+            ItemToPickup.OnDetach += OnDetachItem;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            ItemToPickup.Detach();
+        }
+
+        private void OnDetachItem()
+        {
+            ItemToPickup.OnDetach -= OnDetachItem;
+            ItemToPickup = null;
         }
     }
 }
